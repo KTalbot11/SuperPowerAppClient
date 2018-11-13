@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col} from 'reactstrap';
 import GalleryFeed from "../Feeds/galleryFeed";
+import APIURL from '../helpers/enviorment';
 
 class Gallery extends React.Component{
     constructor(props){
@@ -16,7 +17,7 @@ class Gallery extends React.Component{
 
 
     showPowers = () => {
-        fetch("http://localhost:3002/api/power/", {
+        fetch(`${APIURL}/api/power/`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type' : 'application/json',
@@ -30,7 +31,7 @@ class Gallery extends React.Component{
     }
 
     // deleteCauseDeadline = () => {
-    //     fetch("http://localhost:3002/api/power/:id",{
+    //     fetch(`${APIURL}/api/power/:id`,{
     //         method: 'DELETE',
     //         headers: new Headers({
     //             'Content-Type' : 'application/json'

@@ -1,6 +1,6 @@
 import React from 'react';
 import Create from './Create';
-
+import APIURL from '../helpers/enviorment';
 
 class MyStuff extends React.Component {
     constructor(props) {
@@ -17,7 +17,7 @@ class MyStuff extends React.Component {
 
 
     showPowers = () => {
-        fetch("http://localhost:3002/api/power/", {
+        fetch(`${APIURL}/api/power/`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type' : 'application/json',

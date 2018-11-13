@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
 import styled from 'styled-components'
-
+import APIURL from '../helpers/enviorment';
 
 const Box1 = styled.div`
 background-color: #575757;
@@ -33,7 +33,7 @@ class Create extends Component {
 
     handleSubmit = (event) => {
         console.log(this.props)
-        fetch("http://localhost:3002/api/power/create", {
+        fetch(`${APIURL}/localhost:3002/api/power/create`, {
             method: 'POST',
             body: JSON.stringify({ power: this.state }),
             headers: new Headers({
