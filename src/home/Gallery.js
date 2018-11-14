@@ -30,15 +30,6 @@ class Gallery extends React.Component{
         })
     }
 
-    // deleteCauseDeadline = () => {
-    //     fetch(`${APIURL}/api/power/:id`,{
-    //         method: 'DELETE',
-    //         headers: new Headers({
-    //             'Content-Type' : 'application/json'
-    //         })
-    //     })
-        
-    // }
 
     render() {
         return(

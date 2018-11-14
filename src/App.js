@@ -13,7 +13,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      sessionToken: ''
+      sessionToken: '',
+      userID: ''
     }
   }
 
@@ -24,9 +25,9 @@ class App extends Component {
     }
   }
 
-  setSessionState = (token) => {
+  setSessionState = (token,id) => {
     localStorage.setItem('token', token);
-    this.setState({ sessionToken: token });
+    this.setState({ sessionToken: token, userID: id })
   }
 
   logout = () => {
@@ -45,7 +46,7 @@ class App extends Component {
           <Route path='/Gallery' exact>
             <Gallery sessionToken={this.state.sessionToken} />
           </Route>
-          <Route path="/MyStuff" exact><MyStuff sessionToken={this.state.sessionToken} /></Route>
+          <Route path="/MyStuff" exact><MyStuff sessionToken={this.state.sessionToken} userID={this.state.userID} /></Route>
         </Switch>
       )
     } else {

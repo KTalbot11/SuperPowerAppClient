@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 
 const MyStuffFeed = (props) => {
-    console.log(props);
+
    
     const Box = styled.div`
     background-color: #575757;
@@ -19,19 +19,22 @@ const MyStuffFeed = (props) => {
         <div>
             
             {
-                
-                props.myPowers.map((power, id) => {
+                props.allPowers.map((power, idex) => {
+                    if(power.owner == props.userID){
                     return(
-                        <div key={id}>
+                        <div key={idex}>
                             <Box>
                                 <h2>Name: {power.name}</h2>
                                 <h3>Tag: {power.tags}</h3>
                                 <h3>description: {power.description}</h3>
+                                
                             </Box>
                         </div>
-                    )
+                    )}
                 })
-            } 
+                
+            }  
+       
         </div>
     )
 }
