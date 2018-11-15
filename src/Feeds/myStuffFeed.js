@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 
+
 const MyStuffFeed = (props) => {
 
    
@@ -27,6 +28,8 @@ const MyStuffFeed = (props) => {
                                 <h2>Name: {power.name}</h2>
                                 <h3>Tag: {power.tags}</h3>
                                 <h3>description: {power.description}</h3>
+                                <button id={power.id} onClick={props.delete}>Delete</button>
+                                <button id={power.id} onClick={e => props.update(e, power)}>Update</button>
                                 
                             </Box>
                         </div>

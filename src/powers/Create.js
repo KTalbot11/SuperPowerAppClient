@@ -43,7 +43,7 @@ class Create extends Component {
         }).then(
             (response) => response.json()
         )
-        event.preventDefault()
+        // event.preventDefault()
         
     }
 
