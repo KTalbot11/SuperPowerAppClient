@@ -36,7 +36,7 @@ class Login extends Component {
         return(
             <div>
                 <h1>Login</h1>
-                <h6>Lorem ipsum dolor sit amet consecter oh this is a lorem ipsum my b</h6>
+                <h6>If you have an account, please login to view powers instead.</h6>
                 <Form onSubmit={this.handleSubmit} >
                     <FormGroup>
                         <Label for="username">Username</Label>

@@ -36,7 +36,7 @@ class Signup extends Component {
         return (
             <div>
                 <h1>Sign Up</h1>
-                <h6>oh man this is awkward, I could jus put in the lorem ipsum but this seems more fun while my brain breaks</h6>
+                <h6>If you do not have an account please sign up to view some superpowers</h6>
                 <Form onSubmit={this.handleSubmit}>
                     <FormGroup>
                         <Label for="username">Username</Label>
