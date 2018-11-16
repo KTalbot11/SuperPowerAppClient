@@ -35,7 +35,7 @@ class NavBar extends Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <Button><Link to="/Gallery">Gallery</Link></Button>
+                                <Button><Link to="/">Gallery</Link></Button>
                                 <Button><Link to="/MyStuff">My Stuff</Link></Button>
                                 <Button onClick={() => this.props.clickLogout()}>Logout</Button>
                             </NavItem>

@@ -80,12 +80,14 @@ class MyStuff extends React.Component {
         })
     }
 
+
+
     render() {
         return (
             <Container>
                 <div>
                     <h1>Welcome to the personal stuff.</h1>
-                    <Create sessionToken={this.props.sessionToken} allPowers={this.state.allPowers} >Create One</Create>
+                    <Create sessionToken={this.props.sessionToken} allPowers={this.state.allPowers} showPowers={this.showPowers}>Create One</Create>
                     <MyStuffFeed allPowers={this.state.allPowers} userID={this.props.userID} delete={this.deletePower} update={this.setUpdatePower} sessionToken={this.props.sessionToken}></MyStuffFeed>
 
 

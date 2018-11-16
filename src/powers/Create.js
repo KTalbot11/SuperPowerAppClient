@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
+import React, { Component } from 'react';
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import styled from 'styled-components'
 import APIURL from '../helpers/enviorment';
 import MyStuffFeed from '../Feeds/myStuffFeed'
@@ -15,7 +15,7 @@ color: #f0fff0;
 `;
 
 class Create extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             name: '',
@@ -25,7 +25,7 @@ class Create extends Component {
     }
 
 
-    
+
     handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
@@ -43,35 +43,38 @@ class Create extends Component {
             }),
         }).then(
             (response) => response.json()
-        )
+        ).then(( allPowers) =>  this.props.showPowers())
         event.preventDefault()
-        
+
     }
 
 
-    render(){
-        return(
+    render() {
+        return (
             <Box1>
-            <div>
-                <h1>Create a Power</h1>
-                <h2>Come up with your own super power and post it for others to see.</h2>
-                <Form onSubmit={this.handleSubmit} >
-                    <FormGroup>
-                        <Label for="name">Name of Power</Label>
-                        <Input id="c_name" type="text" name="name" placeholder="enter a name" onChange={this.handleChange}/>
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="tags">Tag</Label>
-                        <Input id="c_tags" type="type" name="tags" /*remember to switch to select when ready to add options*/ placeholder="tags" onChange={this.handleChange} />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="description">description</Label>
-                        <Input id="c_description" type="text" name="description" placeholder="Explain your power." onChange={this.handleChange}/>
-                    </FormGroup>
-                    <Button type="submit" color="primary"> Submit </Button>
-                </Form>
-                <MyStuffFeed  allPowers={this.props.allPowers} />
-            </div>
+                <div>
+                    <h1>Create a Power</h1>
+                    <h2>Come up with your own super power and post it for others to see.</h2>
+                    <Form onSubmit={this.handleSubmit} >
+                        <FormGroup>
+                            <Label for="name">Name of Power</Label>
+                            <Input id="c_name" type="text" name="name" placeholder="enter a name" onChange={this.handleChange} />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for="tags">Tag</Label>
+                            <Input id="c_tags" type="type" name="tags" /*remember to switch to select when ready to add options*/ placeholder="tags" onChange={this.handleChange} />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for="description">description</Label>
+                            <Input id="c_description" type="text" name="description" placeholder="Explain your power." onChange={this.handleChange} />
+                        </FormGroup>
+                        <Button type="submit" color="primary"> Submit </Button>
+                    </Form>
+
+                </div>
+                <div>
+                    <MyStuffFeed allPowers={this.props.allPowers} />
+                </div>
             </Box1>
         )
     }

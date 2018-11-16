@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Auth from './auth/Auth';
 import NavBar from './home/Navbar';
-import Gallery from './home/Gallery';
+import Gallery from './powers/Gallery';
 import MyStuff from './powers/MyStuff';
 import {
   BrowserRouter as Router,
@@ -43,7 +43,7 @@ class App extends Component {
     if (this.state.sessionToken === localStorage.getItem('token')) {
       return (
         <Switch>
-          <Route path='/Gallery' exact>
+          <Route path='/' exact>
             <Gallery sessionToken={this.state.sessionToken} />
           </Route>
           <Route path="/MyStuff" exact><MyStuff sessionToken={this.state.sessionToken} userID={this.state.userID} /></Route>
