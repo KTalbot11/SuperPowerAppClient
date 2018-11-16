@@ -20,6 +20,7 @@ const MyStuffFeed = (props) => {
         <div>
             
             {
+                
                 props.allPowers.map((power, idex) => {
                     if(power.owner == props.userID){
                     return(
@@ -32,6 +33,7 @@ const MyStuffFeed = (props) => {
                                 <button id={power.id} onClick={e => props.update(e, power)}>Update</button>
                                 
                             </Box>
+                            
                         </div>
                     )}
                 })

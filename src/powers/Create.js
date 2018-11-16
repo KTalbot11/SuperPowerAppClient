@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Form, FormGroup, Label, Input, Button} from 'reactstrap';
 import styled from 'styled-components'
 import APIURL from '../helpers/enviorment';
+import MyStuffFeed from '../Feeds/myStuffFeed'
 
 const Box1 = styled.div`
 background-color: #575757;
@@ -43,7 +44,7 @@ class Create extends Component {
         }).then(
             (response) => response.json()
         )
-        // event.preventDefault()
+        event.preventDefault()
         
     }
 
@@ -69,6 +70,7 @@ class Create extends Component {
                     </FormGroup>
                     <Button type="submit" color="primary"> Submit </Button>
                 </Form>
+                <MyStuffFeed  allPowers={this.props.allPowers} />
             </div>
             </Box1>
         )
