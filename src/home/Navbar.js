@@ -11,7 +11,7 @@ import {
 import {
     Link,
 } from 'react-router-dom';
-
+import './navbar.css'
 class NavBar extends Component {
     constructor(props) {
         super(props);
@@ -28,16 +28,16 @@ class NavBar extends Component {
 
     render() {
         return (
-            <div>
+            <div className="NavDiv">
                 <Navbar color="faded" light expand="md">
                     <NavbarBrand href="/">Super Power Gallery</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <Button><Link to="/">Gallery</Link></Button>
-                                <Button><Link to="/MyStuff">My Stuff</Link></Button>
-                                <Button onClick={() => this.props.clickLogout()}>Logout</Button>
+                                <Button className="button"><Link to="/" className="link">Gallery</Link></Button>
+                                <Button className="button"><Link to="/MyStuff" className="link">My Stuff</Link></Button>
+                                <Button className="button" onClick={() => this.props.clickLogout()}>Logout</Button>
                             </NavItem>
                         </Nav>
                     </Collapse>

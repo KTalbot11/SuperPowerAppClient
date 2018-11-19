@@ -8,6 +8,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
+import './App.css';
 
 class App extends Component {
   constructor() {
@@ -51,9 +52,11 @@ class App extends Component {
       )
     } else {
       return (
+        <div>
         <Route path='/auth' >
           <Auth setToken={this.setSessionState} />
         </Route>
+        </div>
       )
     }
   }
@@ -61,9 +64,10 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
-          <NavBar clickLogout={this.logout} />
-          {this.protectedViews()}
+        <div className="App">
+          <div><NavBar clickLogout={this.logout} /></div>
+          
+         <div className="mainDiv"> {this.protectedViews()} </div>
         </div>
       </Router>
     );

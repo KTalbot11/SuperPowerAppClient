@@ -4,7 +4,7 @@ import Create from './Create';
 import APIURL from '../helpers/enviorment';
 import MyStuffFeed from '../Feeds/myStuffFeed';
 import UpdatePower from './UpdatePower';
-
+import './mainColors.css';
 
 class MyStuff extends React.Component {
     constructor(props) {
@@ -85,7 +85,7 @@ class MyStuff extends React.Component {
     render() {
         return (
             <Container>
-                <div>
+                <div className="mainDiv">
                     <h1>Welcome to the personal stuff.</h1>
                     <Create sessionToken={this.props.sessionToken} allPowers={this.state.allPowers} showPowers={this.showPowers}>Create One</Create>
                     <MyStuffFeed allPowers={this.state.allPowers} userID={this.props.userID} delete={this.deletePower} update={this.setUpdatePower} sessionToken={this.props.sessionToken}></MyStuffFeed>
