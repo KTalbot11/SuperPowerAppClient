@@ -33,7 +33,7 @@ class Create extends Component {
     }
 
     handleSubmit = (event) => {
-        console.log(this.props)
+        
         fetch(`${APIURL}/api/power/create`, {
             method: 'POST',
             body: JSON.stringify({ power: this.state }),

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 
 const GalleryFeed = (props) => {
-    console.log(props);
+   
    
     const Box = styled.div`
     background-color: #575757;

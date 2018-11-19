@@ -40,7 +40,7 @@ class Gallery extends React.Component {
                     <Row>
                         <Col md="9">
 
-                            <GalleryFeed allPowers={this.state.allPowers} />
+                            <GalleryFeed allPowers={this.state.allPowers} sessionToken={this.props.sessionToken} />
 
                         </Col>
                     </Row>
