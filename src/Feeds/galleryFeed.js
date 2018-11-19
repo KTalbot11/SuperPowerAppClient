@@ -12,7 +12,7 @@ const GalleryFeed = (props) => {
     border-radius: 3%;
     width: 65%;
     color: #f0fff0;
-    margin-right: 0em;
+     
     `;
 
 

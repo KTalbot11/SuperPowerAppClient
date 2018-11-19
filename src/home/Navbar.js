@@ -22,7 +22,7 @@ class NavBar extends Component {
 
     toggle = () => {
         this.setState({
-            isOpen: this.state.isOpen
+            isOpen: !this.state.isOpen
         });
     }
 
