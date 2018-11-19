@@ -5,16 +5,32 @@ const GalleryFeed = (props) => {
    
    
     const Box = styled.div`
+    @media(max-width:529px){
     background-color: #575757;
     margin: auto;
     margin-top: .5em;
     padding: .5em;
     border-radius: 3%;
-    width: 65%;
+    width: 70%;
     color: #f0fff0;
-     
-    `;
+    }
+    @media(min-width:530px){
+    background-color: #575757;
+    margin-left: auto;
+    margin-top: .5em;
+    padding: .5em;
+    border-radius: 3%;
+    width: 70%;
+    color: #f0fff0;
+    }
 
+    
+    
+    `;
+    
+
+    //look back to have certain resolutions change margins. phone vs laptop. 
+    //edit: I AM A LUCKY DUCK FOR TAKING NOTES AT WORKSHOP
 
     return(
         <div>
