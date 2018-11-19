@@ -42,6 +42,7 @@ const MyStuffFeed = (props) => {
        
         </div>
     )
+
 }   
 
 export default MyStuffFeed;
